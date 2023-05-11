@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href="/css/coplate/favicon/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="/js/vitamin_hyatt/cal.js"></script>
+    <link href="/css/vitamin_hyatt/styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="/css/vitamin_hyatt/styles/theme.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header class="site-header navbar">
+        <div class="content max-width">
+            <a href="/vitamin_hyatt/index.html">
+                <img class="logo" src="/css/vitamin_hyatt/assets/logo.png" alt="Logo">
+            </a>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/vitamin_hyatt/index.html">고양점</a></li>
+                    <!-- <li><a href="">대구점</a></li>
+                    <li><a href="">세종점</a></li>
+                    <li><a href="">양주점</a></li>
+                    <li><a href="">포항점</a></li> -->
+                    <!-- <li><a href="">로그아웃</a></li> -->
+                    <li><a href="/vitamin_hyatt/book_user_list.html">예약자 조회</a></li>
+                    <li><a href="/vitamin_hyatt/room_list.html">객실 조회</a></li>
+                    <li><a href="" data-bs-toggle="modal" data-bs-target="#room">객실등록</a></li>
+                    <li><a href="/vitamin_hyatt/my_page.html">마이페이지</a></li>
+                    <li><a href="" data-bs-toggle="modal" data-bs-target="#login">로그인</a></li>
+                    <li><a href="" data-bs-toggle="modal" data-bs-target="#signup">회원가입</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="site-body">
+        <article class="review-detail max-content-width">
+            <div class="review-info">
+                <a class="back-link" href="/vitamin_hyatt/index.html">&lt; 목록으로</a>
+            </div>
+            <div class="content" style="height: 600px;">
+                <div class="content" style="float:left; width: 30%;">
+                    <h4>Profile</h4>
+                    <div style="height: 400px; width:100%; background-color:rgb(231, 230, 230); float:left">
+                        <div style="margin-left: 20px; margin-top:20px">
+                            <h5>Name</h5>
+                            <p style="margin-left: 10px;">김미영</p>
+                            <h5>Email</h5>
+                            <p style="margin-left: 10px;">kmy9810@naver.com</p>
+                            <h5>Phone</h5>
+                            <p style="margin-left: 10px;">010-8215-9886</p>
+                            <h5>Point</h5>
+                            <p style="margin-left: 10px;">100p</p>
+                        </div>
+                        <div style="display: inline-block; margin-left:20px">
+                            <button class="cp-button secondary" style="width: 120px; font-size:15px">탈퇴</button>
+                        </div>
+                        <div style="float: right; margin-right:20px">
+                            <a class="cp-button secondary" href="" data-bs-toggle="modal" data-bs-target="#profile"
+                                style="width: 120px; font-size:15px">정보
+                                수정</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content" style="display:inline-block; width:600px; margin-left:30px">
+                    <h4>현재 예약</h4>
+                    <table style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th class="pin"> </th>
+                                <th>Col Header</th>
+                                <th>Col Header</th>
+                                <th>Col Header</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Row Header</th>
+                                <td>Cell Data</td>
+                                <td>Cell Data</td>
+                                <td>Cell Data</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4 style="margin-top:50px;">예약 내역</h4>
+                    <table style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th class="pin"> </th>
+                                <th>Col Header</th>
+                                <th>Col Header</th>
+                                <th>Col Header</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Row Header</th>
+                                <td>Cell Data</td>
+                                <td>Cell Data</td>
+                                <td>Cell Data</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4 style="margin-top:50px;">작성한 리뷰</h4>
+                    <table style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th class="pin"> </th>
+                                <th>Col Header</th>
+                                <th>Col Header</th>
+                                <th>Col Header</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Row Header</th>
+                                <td>Cell Data</td>
+                                <td>Cell Data</td>
+                                <td>Cell Data</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </article>
+    </main>
+    <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="su" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="su">
+                        Signup</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="/" method="post">
+                    <div class="modal-body">
+                        <input name="name" type="text" class="form-control" placeholder="Name">
+                        <input name="phone" type="text" class="form-control" placeholder="Phone">
+                        <input name="email" type="email" class="form-control" placeholder="Email">
+                        <input name="password" type="password" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소하기
+                        </button>
+                        <button type="submit" class="btn btn-primary" style="float: right">
+                            Signup
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="/" method="post">
+                    <div class="modal-body">
+                        <input name="email" type="email" class="form-control" placeholder="Email">
+                        <input name="password" type="password" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소하기
+                        </button>
+                        <button type="submit" class="btn btn-primary" style="float: right">
+                            Login
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="profile" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        Profile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="/" method="post">
+                    <div class="modal-body">
+                        <h6>Name : 김미영</h6>
+                        <h6>Email : kmy9810@naver.com</h6>
+                        <h6>Point : 100p</h6>
+                        <input name="phone" type="text" class="form-control" placeholder="phone">
+                        <input name="password" type="password" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소하기
+                        </button>
+                        <button type="submit" class="btn btn-primary" style="float: right">
+                            정보 수정
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="room" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        객실 등록</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="/" method="post">
+                    <div class="modal-body">
+                        <select name="spot">
+                            <option value="">지점선택</option>
+                            <option value="고양점">고양점</option>
+                            <option value="대구점">대구점</option>
+                            <option value="세종점">세종점</option>
+                            <option value="양주점">양주점</option>
+                            <option value="포항점">포항점</option>
+                        </select>
+                        <select name="status">
+                            <option value="">상태</option>
+                            <option value="checkin">check in</option>
+                            <option value="empty">empty</option>
+                        </select>
+                        <input name="name" type="text" class="form-control" placeholder="객실 이름">
+                        <input name="max_memver" type="number" class="form-control" placeholder="최대 인원">
+                        <input name="price" type="number" class="form-control" placeholder="가격">
+                        <textarea placeholder="description" style="width: 100%;"></textarea>
+                        <input name="img" type="file" class="form-control" placeholder="객실 이미지">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소하기
+                        </button>
+                        <button type="submit" class="btn btn-primary" style="float: right">
+                            Save
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -10,87 +10,72 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
-    <script src="/js/vitamin_hyatt/api.js"></script>
-    <link href="/css/vitamin_hyatt/styles/style.css" rel="stylesheet" type="text/css" />
-    <link href="/css/vitamin_hyatt/styles/theme.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="/js/book_user_list.js"></script>
+    <link href="/css/styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="/css/styles/theme.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <!-- nav start -->
     <header class="site-header navbar">
         <div class="content max-width">
-            <a href="/vitamin_hyatt/index.html">
-                <img class="logo" src="/css/vitamin_hyatt/assets/logo.png" alt="Logo">
+            <a href="/index.html">
+                <img class="logo" src="/css/assets/logo.png" alt="Logo">
             </a>
             <nav>
-
                 <ul class="navbar">
-                    <li><a href="/vitamin_hyatt/index.html">고양점</a></li>
+                    <li><a href="/index.html">고양점</a></li>
                     <!-- <li><a href="">대구점</a></li>
                     <li><a href="">세종점</a></li>
                     <li><a href="">양주점</a></li>
                     <li><a href="">포항점</a></li> -->
-
-
-                    <!-- 로그인했는데 어드민 계정일 때만? -->
-                    <li><a href="/vitamin_hyatt/book_user_list.html">예약자 조회</a></li>
-                    <li><a href="/vitamin_hyatt/room_list.html">객실 조회</a></li>
+                    <!-- <li><a href="">로그아웃</a></li> -->
+                    <li><a href="/book_user_list.html">예약자 조회</a></li>
+                    <li><a href="/room_list.html">객실 조회</a></li>
                     <li><a href="" data-bs-toggle="modal" data-bs-target="#room">객실등록</a></li>
-                    <!-- 로그인 X -->
+                    <li><a href="/my_page.html">마이페이지</a></li>
                     <li><a href="" data-bs-toggle="modal" data-bs-target="#login">로그인</a></li>
                     <li><a href="" data-bs-toggle="modal" data-bs-target="#signup">회원가입</a></li>
-
-                    <!-- 로그인 O -->
-                    <li><a href="/vitamin_hyatt/my_page.html">마이페이지</a></li>
-                    <li><a href="" onclick="handleLogout()">로그아웃</a></li>
-
                 </ul>
             </nav>
         </div>
     </header>
-    <!-- nav end -->
-    <!-- content start -->
     <main class="site-body">
-        <div class="main-header">
-            <div class="content">
-                <div class="fg"></div>
-                <h1>Vitamin Hyatt Hotel</h1>
+        <article class="review-detail max-content-width">
+            <div class="review-info">
+                <a class="back-link" href="/index.html">&lt; 목록으로</a>
             </div>
-        </div>
-        <div class="content-list max-content-width">
-            <div class="header">
-                <h2>객실 목록</h2>
-                <a class="location" target="_blank" href="https://www.naver.com/">
-                    <img class="cp-icon" src="/css/vitamin_hyatt/icons/ic-pin.svg" alt="Pin Icon">
-                    <span>위치보기</span>
-                </a>
-            </div>
-            <div class="contents">
-                <a href="/vitamin_hyatt/review_detail.html">
-                    <section class="cp-card content">
-                        <div class="thumb" style="background-image: url('/css/vitamin_hyatt/assets/main-fg2.webp');">
-                        </div>
-                        <div class="body">
-                            <h4>객실 이름</h4>
-                            <div class="metadata">
-                                <div class="review-rating">
-                                    <span class="cp-stars">
-                                        ★
-                                    </span>
-                                </div>
-                                <div class="review-author">
-                                    <span>가격</span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </a>
-            </div>
+            <div class="content" style="display:inline-block; width:100%; margin-left:30px">
+                <h4>예약자 명단</h4>
+                <select name="객실" id="selet_room_category" onchange="bookUserList()">
+                    <option value="">객실</option>
+                    <option value="1">스위트룸</option>
+                    <option value="2">스탠다드</option>
+                </select>
+                <table style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th class="pin"> </th>
+                            <th>예약자</th>
+                            <th>예약자 전화번호</th>
+                            <th>체크인</th>
+                            <th>체크아웃</th>
+                            <th>현재상태</th>
+                        </tr>
+                    </thead>
+                    <tbody id="book_info">
+                    </tbody>
+                </table>
+                <div id="test">
 
-        </div>
+                </div>
+            </div>
+            </div>
+        </article>
     </main>
-    <!-- content end -->
-    <!-- sign up start -->
     <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="su" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -99,21 +84,17 @@
                         Signup</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form>
+                <form action="/" method="post">
                     <div class="modal-body">
-                        <input name="username" id="username" type="text" class="form-control" placeholder="Name">
-                        <input name="email" id="email" type="email" class="form-control" placeholder="Email">
-                        <input name="password" id="password" type="password" class="form-control"
-                            placeholder="Password">
-                        <input name="password2" id="password2" type="password" class="form-control"
-                            placeholder="Password2">
-                        <input name="phone" id="phone" type="text" oninput="autoHyphen(this)" class="form-control"
-                            placeholder="Phone">
+                        <input name="name" type="text" class="form-control" placeholder="Name">
+                        <input name="phone" type="text" class="form-control" placeholder="Phone">
+                        <input name="email" type="email" class="form-control" placeholder="Email">
+                        <input name="password" type="password" class="form-control" placeholder="Password">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소하기
                         </button>
-                        <button type="button" onclick="handleSignup()" class="btn btn-primary" style="float: right">
+                        <button type="submit" class="btn btn-primary" style="float: right">
                             Signup
                         </button>
                     </div>
@@ -121,8 +102,6 @@
             </div>
         </div>
     </div>
-    <!-- sign up end -->
-    <!-- login start -->
     <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -131,17 +110,15 @@
                         Login</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form>
+                <form action="/" method="post">
                     <div class="modal-body">
-                        <!-- input에 id값 추가하기 -->
-                        <input name="email" id="login-email" type="email" class="form-control" placeholder="Email">
-                        <input name="password" id="login-password" type="password" class="form-control"
-                            placeholder="Password">
+                        <input name="email" type="email" class="form-control" placeholder="Email">
+                        <input name="password" type="password" class="form-control" placeholder="Password">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소하기
                         </button>
-                        <button type="button" onclick="handleSignin()" class="btn btn-primary" style="float: right">
+                        <button type="submit" class="btn btn-primary" style="float: right">
                             Login
                         </button>
                     </div>
@@ -149,8 +126,6 @@
             </div>
         </div>
     </div>
-    <!-- login end -->
-    <!-- room start -->
     <div class="modal fade" id="room" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -191,7 +166,6 @@
             </div>
         </div>
     </div>
-    <!-- room end -->
 </body>
 
 </html>

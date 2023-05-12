@@ -12,6 +12,7 @@
         crossorigin="anonymous"></script>
 
     <script src="/js/vitamin_hyatt/api.js"></script>
+    <script src="/js/vitamin_hyatt/login.js"></script>
 
     <link href="/css/vitamin_hyatt/styles/style.css" rel="stylesheet" type="text/css" />
     <link href="/css/vitamin_hyatt/styles/theme.css" rel="stylesheet" type="text/css" />
@@ -107,7 +108,8 @@
                             placeholder="Password">
                         <input name="password2" id="password2" type="password" class="form-control"
                             placeholder="Password2">
-                        <input name="phone" id="phone" type="text" class="form-control" placeholder="Phone">
+                        <input name="phone" id="phone" type="text" oninput="autoHyphen(this)" class="form-control"
+                            placeholder="Phone">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소하기

@@ -1,9 +1,10 @@
 window.onload = () => {
-    bookUserList()
 }
 
 async function bookUserList() {
-    const response = await fetch('http://127.0.0.1:8000/manager/customers/1/', {
+    const room_id = $('#selet_room_category').val()
+    console.log(room_id)
+    const response = await fetch(`http://127.0.0.1:8000/manager/customers/${room_id}/`, {
         headers: {
             'content-type': 'application/json',
         },
@@ -11,7 +12,7 @@ async function bookUserList() {
     })
 
     const response_json = await response.json()
-
+    $('#book_info').empty()
     response_json['book_set'].forEach((a) => {
         const num = a['id']
         const check_in = a['check_in']
@@ -30,4 +31,5 @@ async function bookUserList() {
                         </tr>`
         $('#book_info').append(temp_html)
     })
+    // window.location.reload()
 }

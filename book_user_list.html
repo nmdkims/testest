@@ -14,30 +14,30 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <script src="/js/vitamin_hyatt/cal.js"></script>
-    <link href="/css/vitamin_hyatt/styles/style.css" rel="stylesheet" type="text/css" />
-    <link href="/css/vitamin_hyatt/styles/theme.css" rel="stylesheet" type="text/css" />
-    <link href="/css/vitamin_hyatt/styles/eunsu.css" rel="stylesheet" type="text/css" />
+    <script src="/js/book_user_list.js"></script>
+    <link href="/css/styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="/css/styles/theme.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
     <header class="site-header navbar">
         <div class="content max-width">
-            <a href="/vitamin_hyatt/index.html">
-                <img class="logo" src="/css/vitamin_hyatt/assets/logo.png" alt="Logo">
+            <a href="/index.html">
+                <img class="logo" src="/css/assets/logo.png" alt="Logo">
             </a>
             <nav>
                 <ul class="navbar">
-                    <li><a href="/vitamin_hyatt/index.html">고양점</a></li>
+                    <li><a href="/index.html">고양점</a></li>
                     <!-- <li><a href="">대구점</a></li>
                     <li><a href="">세종점</a></li>
                     <li><a href="">양주점</a></li>
                     <li><a href="">포항점</a></li> -->
                     <!-- <li><a href="">로그아웃</a></li> -->
-                    <li><a href="/vitamin_hyatt/book_user_list.html">예약자 조회</a></li>
-                    <li><a href="/vitamin_hyatt/room_list.html">객실 조회</a></li>
+                    <li><a href="/book_user_list.html">예약자 조회</a></li>
+                    <li><a href="/room_list.html">객실 조회</a></li>
                     <li><a href="" data-bs-toggle="modal" data-bs-target="#room">객실등록</a></li>
-                    <li><a href="/vitamin_hyatt/my_page.html">마이페이지</a></li>
+                    <li><a href="/my_page.html">마이페이지</a></li>
                     <li><a href="" data-bs-toggle="modal" data-bs-target="#login">로그인</a></li>
                     <li><a href="" data-bs-toggle="modal" data-bs-target="#signup">회원가입</a></li>
                 </ul>
@@ -47,13 +47,12 @@
     <main class="site-body">
         <article class="review-detail max-content-width">
             <div class="review-info">
-                <a class="back-link" href="/vitamin_hyatt/index.html">&lt; 목록으로</a>
+                <a class="back-link" href="/index.html">&lt; 목록으로</a>
             </div>
             <div class="content" style="display:inline-block; width:100%; margin-left:30px">
                 <h4>예약자 명단</h4>
-                <select name="객실">
-                    <option value="">객실선택</option>
-                    <option value="스위트룸">스위트룸</option>
+                <select name="객실" id="selet_room_category" onchange="bookUserList()">
+                    <option value="-1">객실</option>
                 </select>
                 <table style="width: 100%;">
                     <thead>
@@ -66,17 +65,12 @@
                             <th>현재상태</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <th>스위트룸</th>
-                            <td>김미영</td>
-                            <td>010-8215-9886</td>
-                            <td>2023-05-11</td>
-                            <td>2023-05-12</td>
-                            <td>empty</td>
-                        </tr>
+                    <tbody id="book_info">
                     </tbody>
                 </table>
+                <div id="test">
+
+                </div>
             </div>
             </div>
         </article>

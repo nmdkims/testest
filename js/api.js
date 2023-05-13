@@ -32,7 +32,6 @@ async function handleSignup() {
         })
     })
 
-
     if (response.status == 201) {
         document.getElementById("signup").querySelector('[data-bs-dismiss="modal"]').click();
     }
@@ -52,6 +51,7 @@ async function handleSignup() {
             console.log('String not found');
         }
     }
+
 }
 
 // 로그인
@@ -99,7 +99,7 @@ function handleLogout() {
     localStorage.removeItem("access")
     localStorage.removeItem("refresh")
     localStorage.removeItem("payload")
-    window.location.replace(`${frontend_base_url}/vitamin_hyatt/index.html`)
+    window.location.replace(`${frontend_base_url}/index.html`)
     location.reload()
 }
 
@@ -140,5 +140,5 @@ async function handlesUserDelete() {
     localStorage.removeItem("access")
     localStorage.removeItem("refresh")
     localStorage.removeItem("payload")
-    window.location.replace(`${frontend_base_url}/vitamin_hyatt/index.html`)
+    window.location.replace(`${frontend_base_url}/index.html`)
 }

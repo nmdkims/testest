@@ -41,7 +41,9 @@ async function handleSignup() {
             "password2": password2,
             "phone": phoneWithHyphen
         })
-    })
+
+    });
+
 
     if (response.status == 201) {
         document.getElementById("signup").querySelector('[data-bs-dismiss="modal"]').click();
@@ -51,11 +53,12 @@ async function handleSignup() {
 
         console.log(response_json)
 
-        alert(response_json[ErrorDetail])
+        alert(response_json['message'])
 
     }
-
 }
+
+
 
 // 로그인
 async function handleSignin() {
